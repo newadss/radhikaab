@@ -8,7 +8,20 @@
 <meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;700;800&family=Noto+Sans+Telugu:wght@500;700&display=swap" rel="stylesheet">
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq.disablePushState = true;
+fbq('set', 'autoConfig', false, '1569087497774063');
+fbq('init', '1569087497774063');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1569087497774063&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 <style>
 :root{
   --y:#ffd60a; --y2:#ffb800; --ink:#fffbea; --muted:#bdb7a3; --black:#0a0a0a;
@@ -154,8 +167,6 @@ h1 mark{background:var(--y);color:var(--black);padding:0 6px;border-radius:4px;-
 </style>
 </head>
 <body>
-<div style="position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:60;background:#ffd400;color:#000;font:800 11px/1 sans-serif;padding:6px 12px;border-radius:20px;letter-spacing:1px">PREVIEW MODE</div>
-<div id="toast" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:60;background:#111;color:#fff;border:1px solid #ffd60a;font:600 13px/1.4 sans-serif;padding:10px 14px;border-radius:12px;opacity:0;transition:opacity .2s;max-width:90%;text-align:center"></div>
 <main class="frame">
   <header class="top">
     <img class="av" src="data:image/webp;base64,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" alt="Radhika Telugu Trader" width="52" height="52">
@@ -276,7 +287,7 @@ document.getElementById('yr').textContent = new Date().getFullYear();
       !navigator.languages || navigator.languages.length === 0;
   }
   function alreadySubscribed(){
-    try { return false; }
+    try { var t = parseInt(localStorage.getItem(KEY) || '0', 10); return t > 0 && (Date.now() - t) < KEEP_DAYS * 864e5; }
     catch(_) { return false; }
   }
   function waitForPixel(MIN, MAX, done){
@@ -294,16 +305,16 @@ document.getElementById('yr').textContent = new Date().getFullYear();
   }
   var btn = document.querySelector('.js-cta');
   btn.href = TG_LINK;
-  function showToast(m){ var t=document.getElementById('toast'); t.textContent=m; t.style.opacity='1'; clearTimeout(t._h); t._h=setTimeout(function(){t.style.opacity='0'},2600); }
   btn.addEventListener('click', function(e){
-    e.preventDefault();
     if (e.isTrusted && human && (Date.now() - loadTime) >= MIN_TIME && !isBot() && !fired && !alreadySubscribed() &&
-        document.visibilityState === 'visible') {
+        document.visibilityState === 'visible' && typeof fbq === 'function') {
       fired = true;
       try { localStorage.setItem(KEY, String(Date.now())); } catch(_){}
+      fbq('track', 'Subscribe', {content_name:'Telegram Join', currency:'INR', value:0},
+        {eventID:'rtt_' + loadTime + '_' + Math.random().toString(36).slice(2,8)});
       e.preventDefault();
-      showToast('Subscribe event yahan fire hota (preview me band)');
-    } else { showToast('Yahan Telegram channel khulta (preview me band)'); }
+      waitForPixel(MIN_WAIT_MS, MAX_WAIT_MS, function(){ window.location.href = TG_LINK; });
+    }
   });
 })();
 </script>
