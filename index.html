@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radhika Telugu Trader | Daily Market Learning</title>
+<meta name="description" content="Short daily stock market lessons in Telugu & English. Educational content only.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;700;800&family=Noto+Sans+Telugu:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --y:#ffd60a; --y2:#ffb800; --ink:#fffbea; --muted:#bdb7a3; --black:#0a0a0a;
+  --hd:"Archivo Black","Arial Black",Impact,sans-serif;
+  --bd:"Archivo",-apple-system,"Segoe UI",Roboto,sans-serif;
+  --te:"Noto Sans Telugu","Gautami","Vani","Nirmala UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{height:100%}
+body{height:100vh;height:100dvh;overflow:hidden;display:flex;justify-content:center;
+  padding:calc(10px + env(safe-area-inset-top)) 10px calc(10px + env(safe-area-inset-bottom));
+  font-family:var(--bd);color:var(--ink);-webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,214,10,.55),transparent 30%),
+    radial-gradient(circle at 0% 45%,rgba(255,184,0,.35),transparent 28%),
+    radial-gradient(circle at 100% 75%,rgba(255,214,10,.3),transparent 28%),
+    radial-gradient(circle at 10% 100%,rgba(255,140,0,.35),transparent 30%),
+    linear-gradient(170deg,#141208,#0a0a0a 55%,#0d0b05)}
+.te{font-family:var(--te)}
+
+/* ===== Glass mockup frame ===== */
+.frame{position:relative;width:100%;max-width:460px;height:100%;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;gap:10px;padding:14px 16px 10px;
+  border-radius:30px;border:1.5px solid rgba(255,214,10,.45);
+  background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03) 55%,rgba(255,214,10,.06));
+  -webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 40px rgba(255,214,10,.12),inset 0 1px 0 rgba(255,255,255,.25)}
+.frame::before{content:"";position:absolute;top:-10%;left:-40%;width:55%;height:120%;z-index:0;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.06),transparent);transform:rotate(14deg)}
+.frame>*{position:relative;z-index:1}
+.g{background:linear-gradient(150deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1.5px solid rgba(255,214,10,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.14)}
+
+/* header */
+.top{display:flex;align-items:center;gap:11px}
+.av{flex:0 0 auto;width:52px;height:52px;border-radius:50%;object-fit:cover;border:3px solid var(--y);box-shadow:0 0 0 3px rgba(255,214,10,.2)}
+.top b{display:block;font:900 15px/1.15 var(--hd);letter-spacing:.2px;text-transform:uppercase}
+.top small{display:block;margin-top:3px;font:700 11.5px/1.3 var(--bd);color:var(--muted)}
+.chip{margin-left:auto;font:900 11px/1 var(--hd);letter-spacing:1px;color:var(--black);background:var(--y);padding:7px 10px;border-radius:8px;transform:rotate(-3deg)}
+
+/* S-6 editorial headline */
+.tag{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:8px;font:800 11px/1 var(--bd);letter-spacing:1.4px;text-transform:uppercase;color:var(--y)}
+.tag .te{font:700 11.5px/1 var(--te);letter-spacing:0;text-transform:none;color:var(--ink)}
+h1{margin-top:10px;font:900 clamp(24px,7.2vw,32px)/1.04 var(--hd);letter-spacing:-.5px;text-transform:uppercase}
+h1 mark{background:var(--y);color:var(--black);padding:0 6px;border-radius:4px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.h1te{display:block;margin-top:9px;padding-left:10px;border-left:4px solid var(--y);font:700 clamp(14px,4.1vw,16px)/1.5 var(--te);color:var(--ink)}
+.sub{margin-top:8px;font:500 13px/1.45 var(--bd);color:var(--muted)}
+
+/* C-6 weekly habit line chart (no prices, no numbers) */
+.chart{border-radius:18px;padding:10px 12px 8px}
+.chart h2{display:flex;justify-content:space-between;font:800 10.5px/1 var(--bd);letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+.chart h2 span{color:var(--y)}
+.chart svg{display:block;width:100%;height:50px;margin-top:4px}
+.line{stroke-dasharray:420;stroke-dashoffset:420;animation:draw 3.2s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.days{display:flex;justify-content:space-between;padding:0 2px;font:700 9.5px/1 var(--bd);color:var(--muted);letter-spacing:.5px}
+
+/* learning points */
+.pts{display:flex;flex-direction:column;gap:8px}
+.pt{display:flex;gap:11px;align-items:flex-start}
+.pt .n{flex:0 0 auto;font:900 22px/1 var(--hd);color:var(--y);min-width:30px}
+.pt .t{font:700 14.5px/1.4 var(--te)}
+.pt .t span{display:block;font:800 12.5px/1.3 var(--bd);color:var(--y)}
+.pt p{margin-top:2px;font:500 11.8px/1.4 var(--bd);color:var(--muted)}
+
+/* CTA – hazard-stripe moving border + shimmer */
+.ctaw{position:relative;padding:3px;border-radius:16px;overflow:hidden;isolation:isolate;box-shadow:0 0 30px rgba(255,214,10,.35)}
+.ctaw::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:repeating-linear-gradient(135deg,var(--y) 0 10px,#111 10px 20px);background-size:56px 56px;animation:march .9s linear infinite}
+.cta{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:13px 14px;border-radius:13px;
+  text-decoration:none;text-align:center;color:var(--black);font:900 clamp(16px,4.6vw,20px)/1.2 var(--hd);letter-spacing:.4px;
+  background:linear-gradient(180deg,#ffe24d,var(--y) 50%,var(--y2))}
+.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.55),transparent 55%);opacity:.35;animation:blink 1.6s ease-in-out infinite}
+.cta svg{flex:0 0 auto;animation:nudge 1.3s ease-in-out infinite}
+@keyframes march{to{background-position:56px 0}}
+@keyframes blink{50%{opacity:.85}}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+.cta:active{transform:scale(.97)}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.status{margin-top:8px;text-align:center;font:600 11.5px/1.45 var(--bd);color:var(--muted)}
+.status .te{display:block;font:600 12px/1.45 var(--te);color:var(--ink)}
+
+.disc{padding:9px 12px;border-radius:14px;font:500 10.3px/1.5 var(--bd);color:var(--muted)}
+.disc b{color:var(--y)}
+.disc .te{display:block;font:500 10.8px/1.55 var(--te);color:#e6e1cf;margin-bottom:4px}
+.foot{text-align:center;font:500 10px/1.5 var(--bd);color:#8f8a78}
+.foot a{color:var(--y)}
+
+/* Privacy popup */
+#privacy{display:none;position:fixed;inset:0;z-index:50;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px;
+  background:rgba(0,0,0,.65);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+#privacy:target,#privacy.open{display:block}
+.pp{max-width:480px;margin:0 auto;padding:18px 16px 20px;border-radius:22px;font:500 13.5px/1.65 var(--bd);color:#e6e1cf;
+  background:linear-gradient(165deg,rgba(30,27,14,.98),rgba(12,11,6,.98));border:1.5px solid rgba(255,214,10,.35)}
+.pp-head{display:flex;justify-content:space-between;align-items:center}
+.pp h3{font:900 21px/1.2 var(--hd);color:var(--ink);text-transform:uppercase}
+.pp h3 .te{display:block;font:700 14px/1.4 var(--te);color:var(--y);text-transform:none}
+.pp-close{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;text-decoration:none;color:var(--ink);background:rgba(255,255,255,.08);border:1px solid rgba(255,214,10,.3)}
+.pp .date{font-size:12px;color:var(--muted);margin:4px 0 10px}
+.pp h2{margin:14px 0 3px;font:800 15px/1.4 var(--bd);color:var(--y)}
+.pp h2 .te{font:700 13px/1.4 var(--te);color:#f3e7a6}
+.pp p.te{font-size:12.5px;color:#cfc8ac}
+.pp ul{padding-left:18px}
+.pp a{color:var(--y)}
+.pp-back{display:block;margin-top:18px;padding:12px;border-radius:12px;text-align:center;text-decoration:none;font:900 15px/1 var(--hd);color:var(--black);background:var(--y)}
+
+@media (max-height:940px){ .sub{display:none} }
+@media (max-height:960px){ .pt p{display:none} .pts{gap:7px} }
+@media (max-height:860px){
+  .frame{gap:8px;padding:11px 13px 8px}
+  .av{width:46px;height:46px}
+  h1{font-size:clamp(21px,6vw,26px);margin-top:8px}
+  .h1te{margin-top:7px}
+  .chart{padding:8px 10px 6px}
+  .chart svg{height:42px}
+  .pt .n{font-size:19px}
+  .pt .t{font-size:13.5px}
+  .cta{min-height:52px;padding:11px}
+  .disc{padding:8px 10px;font-size:9.8px;line-height:1.45}
+  .disc .te{font-size:10.3px;line-height:1.5}
+}
+@media (max-height:720px){
+  body{padding:6px}
+  .frame{border-radius:24px;gap:6px;padding:9px 11px 6px}
+  .av{width:40px;height:40px;border-width:2px}
+  .top b{font-size:14px}
+  .tag{padding:5px 8px}
+  h1{font-size:20px;margin-top:6px}
+  .h1te{font-size:13px;margin-top:5px}
+  .chart h2{display:none}
+  .chart svg{height:34px;margin-top:0}
+  .days{display:none}
+  .pt .t{font-size:12.8px;line-height:1.3}
+  .pt .t span{font-size:11.5px}
+  .cta{min-height:46px;padding:9px}
+  .status{margin-top:5px;font-size:10.5px}
+  .status .te{font-size:11px}
+  .disc{font-size:9.2px;line-height:1.4}
+  .disc .te{font-size:9.6px;line-height:1.42;margin-bottom:2px}
+  .foot{font-size:9.2px;line-height:1.35}
+}
+@media (max-height:620px){ .chart{display:none} }
+@media (prefers-reduced-motion:reduce){.line{animation:none;stroke-dashoffset:0}.ctaw::before,.cta::after,.cta svg{animation:none}}
+</style>
+</head>
+<body>
+<div style="position:fixed;top:8px;left:50%;transform:translateX(-50%);z-index:60;background:#ffd400;color:#000;font:800 11px/1 sans-serif;padding:6px 12px;border-radius:20px;letter-spacing:1px">PREVIEW MODE</div>
+<div id="toast" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:60;background:#111;color:#fff;border:1px solid #ffd60a;font:600 13px/1.4 sans-serif;padding:10px 14px;border-radius:12px;opacity:0;transition:opacity .2s;max-width:90%;text-align:center"></div>
+<main class="frame">
+  <header class="top">
+    <img class="av" src="data:image/webp;base64,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" alt="Radhika Telugu Trader" width="52" height="52">
+    <div><b>Radhika Telugu Trader</b><small><span class="te">తెలుగు</span> + English lessons</small></div>
+    <span class="chip">FREE</span>
+  </header>
+
+  <section>
+    <span class="tag g">Daily learning habit <span class="te">• రోజువారీ అభ్యాసం</span></span>
+    <h1>A little market learning, <mark>every single day.</mark></h1>
+    <span class="h1te">ప్రతి రోజూ కొంచెం మార్కెట్ నేర్చుకోండి</span>
+    <p class="sub">Short daily lessons in Telugu and English on our free Telegram channel.</p>
+  </section>
+
+  <section class="chart g" aria-label="Weekly learning habit">
+    <h2>Your learning week <span>One lesson a day</span></h2>
+    <svg viewBox="0 0 300 64" height="50" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#ffb800"/><stop offset="1" stop-color="#ffd60a"/></linearGradient></defs>
+      <line x1="0" y1="56" x2="300" y2="56" stroke="rgba(255,255,255,.12)" stroke-dasharray="4 5"/>
+      <path class="line" d="M10 40 C40 22,60 46,95 30 S150 18,180 34 S240 20,290 26" fill="none" stroke="url(#lg)" stroke-width="3.5" stroke-linecap="round"/>
+      <g fill="#ffd60a"><circle cx="10" cy="40" r="4"/><circle cx="56" cy="38" r="4"/><circle cx="103" cy="28" r="4"/><circle cx="150" cy="24" r="4"/><circle cx="196" cy="31" r="4"/><circle cx="243" cy="23" r="4"/><circle cx="290" cy="26" r="4"/></g>
+    </svg>
+    <div class="days"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+  </section>
+
+  <section class="pts" aria-label="What you will learn">
+    <div class="pt"><span class="n">01</span><div><div class="t">ట్రేడింగ్ జర్నల్ రాయడం<span>Keeping a trading journal</span></div><p>Note what you learned each day and look back at it every week.</p></div></div>
+    <div class="pt"><span class="n">02</span><div><div class="t">చార్ట్ టైమ్‌ఫ్రేమ్‌లు<span>Chart timeframes</span></div><p>Why the same chart looks so different on short and long views.</p></div></div>
+    <div class="pt"><span class="n">03</span><div><div class="t">మనస్తత్వం &amp; క్రమశిక్షణ<span>Trading psychology &amp; discipline</span></div><p>Build calm daily routines instead of reacting to every move.</p></div></div>
+  </section>
+
+  <div>
+    <div class="ctaw">
+      <a class="cta js-cta" href="https://t.me/+Et0U4wq8HjcwODI1">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0a0a" aria-hidden="true"><path d="M2.5 11.3 21 3.6c.9-.4 1.7.4 1.4 1.4l-3.6 15.6c-.2 1-1.3 1.4-2.1.8l-5.1-3.8-2.6 2.5c-.4.4-1 .2-1.1-.4l-.6-4.8 9.7-8.6-12 7.4-4.4-1.4c-1-.3-1-1.6.1-2z"/></svg>
+        JOIN FREE TELEGRAM CHANNEL
+      </a>
+    </div>
+    <p class="status"><span class="te">ఉచితం • రుసుము లేదు • ఎప్పుడైనా వదిలేయవచ్చు</span>Free to join • No charges • Leave whenever you wish</p>
+  </div>
+
+  <div class="disc g">
+    <span class="te"><b>నిరాకరణ:</b> ఈ కంటెంట్ విద్యా ప్రయోజనాల కోసం మాత్రమే; ఇది పెట్టుబడి సలహా లేదా కొనుగోలు/అమ్మకం సిఫార్సు కాదు. మేము SEBI నమోదిత సలహాదారులం కాదు. ట్రేడింగ్‌లో మూలధనం కోల్పోయే ప్రమాదం ఉంది.</span>
+    <b>Disclaimer:</b> This content is for educational purposes only and is not investment advice or a buy/sell recommendation. We are not SEBI-registered advisors. Trading involves risk, including loss of capital.
+  </div>
+
+  <footer class="foot">© <span id="yr">2026</span> Radhika Telugu Trader • <a href="#privacy" id="ppOpen">Privacy Policy</a><br>This site is not a part of the Facebook website or Meta Platforms, Inc.</footer>
+</main>
+
+<!-- ===== Privacy Policy (same file) – direct link: yoursite.com/#privacy ===== -->
+<section id="privacy" aria-label="Privacy Policy">
+ <div class="pp">
+  <div class="pp-head"><h3>Privacy Policy<span class="te">గోప్యతా విధానం</span></h3><a class="pp-close pp-x" href="#" aria-label="Close">✕</a></div>
+  <p class="date">Last updated: October 2026</p>
+  <h2>1. Who we are <span class="te">• మేము ఎవరు</span></h2>
+  <p>This website is operated by Radhika Telugu Trader ("we", "us"). This policy applies to all our landing pages.</p>
+  <p class="te">ఈ వెబ్‌సైట్‌ను Radhika Telugu Trader నిర్వహిస్తుంది.</p>
+  <h2>2. Information we collect <span class="te">• మేము సేకరించే సమాచారం</span></h2>
+  <p>There are no forms on this page and we never ask for your name, phone number, email or payment details. Basic visit data, such as pages viewed, button clicks, device and browser type, approximate location and the ad you came from, may be collected automatically through cookies and similar tools.</p>
+  <p class="te">మేము మీ పేరు, ఫోన్ లేదా ఈమెయిల్ అడగము.</p>
+  <h2>3. Meta Pixel <span class="te">• మెటా పిక్సెల్</span></h2>
+  <p>We use the Meta Pixel by Meta Platforms, Inc. to record page views and clicks on the join button, so we can measure and improve our Facebook and Instagram ads. Learn more in <a href="https://www.facebook.com/privacy/policy" rel="noopener">Meta's Privacy Policy</a> and manage your <a href="https://www.facebook.com/adpreferences" rel="noopener">Ad Preferences</a>.</p>
+  <p class="te">ప్రకటనల పనితీరును కొలవడానికి Meta Pixel ఉపయోగిస్తాము.</p>
+  <h2>4. Browser storage <span class="te">• బ్రౌజర్ స్టోరేజ్</span></h2>
+  <p>We store one small value in your browser's local storage to remember that you already tapped the join button, so the same visit is not counted twice. It holds no personal details and you can clear it at any time.</p>
+  <p class="te">మీ బ్రౌజర్‌లో ఒక చిన్న గుర్తు మాత్రమే సేవ్ అవుతుంది.</p>
+  <h2>5. How we use it <span class="te">• దీనిని ఎలా ఉపయోగిస్తాము</span></h2>
+  <ul><li>To measure and improve our ads</li><li>To filter out fake, automated or duplicate clicks</li><li>To avoid showing ads again to people who have already joined</li></ul>
+  <p>We never sell your information.</p>
+  <p class="te">మీ సమాచారాన్ని ఎవరికీ అమ్మము.</p>
+  <h2>6. Telegram <span class="te">• టెలిగ్రామ్</span></h2>
+  <p>The join button opens Telegram. Anything you share there is covered by <a href="https://telegram.org/privacy" rel="noopener">Telegram's Privacy Policy</a>.</p>
+  <p class="te">బటన్ నొక్కిన తర్వాత టెలిగ్రామ్ నియమాలు వర్తిస్తాయి.</p>
+  <h2>7. Data retention <span class="te">• డేటా నిల్వ కాలం</span></h2>
+  <p>Pixel data is kept by Meta under its own policies. Ad audiences we create are kept for up to 180 days.</p>
+  <p class="te">ప్రకటన ఆడియన్స్ గరిష్టంగా 180 రోజులు ఉంటాయి.</p>
+  <h2>8. Your choices &amp; rights <span class="te">• మీ ఎంపికలు &amp; హక్కులు</span></h2>
+  <ul><li>Block or clear cookies and local storage in your browser</li><li>Use tracking protection or an ad blocker</li><li>Manage ad personalisation in Meta Ad Preferences</li><li>Exercise your rights under Indian law, including the Digital Personal Data Protection Act, 2023</li></ul>
+  <p class="te">మీరు ఎప్పుడైనా బ్రౌజర్ డేటాను తొలగించవచ్చు.</p>
+  <h2>9. Age 18+ <span class="te">• వయస్సు 18+</span></h2>
+  <p>Our pages and channel are intended only for people aged 18 and above.</p>
+  <p class="te">ఈ పేజీ 18 ఏళ్లు పైబడిన వారికి మాత్రమే.</p>
+  <h2>10. Not investment advice <span class="te">• పెట్టుబడి సలహా కాదు</span></h2>
+  <p>All content is for education only and is not investment advice. Investments in the securities market carry risk.</p>
+  <p class="te">ఇది కేవలం విద్య కోసం మాత్రమే.</p>
+  <h2>11. Changes <span class="te">• మార్పులు</span></h2>
+  <p>We may update this policy from time to time; any change will appear here with a new date.</p>
+  <p class="te">మార్పులు ఉంటే ఇక్కడ తెలియజేస్తాము.</p>
+  <a class="pp-back pp-x" href="#">← Back to page</a>
+ </div>
+</section>
+
+<script>
+// ================= SETTINGS =================
+var TG_LINK = "https://t.me/+Et0U4wq8HjcwODI1";
+var MIN_TIME = 1000;      // page par kam se kam 1 sec
+var KEEP_DAYS = 180;      // ek browser se 180 din mein 1 Subscribe
+var MIN_WAIT_MS = 150;    // Telegram kholne se pehle kam se kam
+var MAX_WAIT_MS = 500;    // zyada se zyada
+// ============================================
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var pp = document.getElementById('privacy');
+  document.getElementById('ppOpen').addEventListener('click', function(e){ e.preventDefault(); pp.classList.add('open'); pp.scrollTop = 0; });
+  var xs = document.querySelectorAll('.pp-x');
+  for (var i = 0; i < xs.length; i++) xs[i].addEventListener('click', function(e){
+    e.preventDefault(); pp.classList.remove('open');
+    if (location.hash === '#privacy') history.replaceState(null, '', location.pathname + location.search);
+  });
+})();
+(function(){
+  var loadTime = Date.now(), human = false, fired = false, KEY = 'rtt_sub_at';
+  var evs = ['touchstart','pointerdown','pointermove','scroll','wheel','keydown'];
+  for (var i = 0; i < evs.length; i++) window.addEventListener(evs[i], function(e){ if (e.isTrusted) human = true; }, {passive:true, capture:true});
+  function isBot(){
+    var ua = navigator.userAgent || '';
+    return navigator.webdriver === true || /bot|crawler|spider|headless|facebookexternalhit|lighthouse|preview/i.test(ua) ||
+      !navigator.languages || navigator.languages.length === 0;
+  }
+  function alreadySubscribed(){
+    try { return false; }
+    catch(_) { return false; }
+  }
+  function waitForPixel(MIN, MAX, done){
+    var start = Date.now(), finished = false, obs;
+    function finish(){ if (finished) return; finished = true; try { obs && obs.disconnect(); } catch(_){} done(); }
+    try {
+      obs = new PerformanceObserver(function(list){
+        var en = list.getEntries(), hit = false;
+        for (var j = 0; j < en.length; j++) if (/facebook\.com\/tr/.test(en[j].name) && /ev=Subscribe/.test(en[j].name)) hit = true;
+        if (hit) { var w = MIN - (Date.now() - start); if (w > 0) setTimeout(finish, w); else finish(); }
+      });
+      obs.observe({type:'resource', buffered:true});
+    } catch(_){}
+    setTimeout(finish, MAX);
+  }
+  var btn = document.querySelector('.js-cta');
+  btn.href = TG_LINK;
+  function showToast(m){ var t=document.getElementById('toast'); t.textContent=m; t.style.opacity='1'; clearTimeout(t._h); t._h=setTimeout(function(){t.style.opacity='0'},2600); }
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    if (e.isTrusted && human && (Date.now() - loadTime) >= MIN_TIME && !isBot() && !fired && !alreadySubscribed() &&
+        document.visibilityState === 'visible') {
+      fired = true;
+      try { localStorage.setItem(KEY, String(Date.now())); } catch(_){}
+      e.preventDefault();
+      showToast('Subscribe event yahan fire hota (preview me band)');
+    } else { showToast('Yahan Telegram channel khulta (preview me band)'); }
+  });
+})();
+</script>
+</body>
+</html>
